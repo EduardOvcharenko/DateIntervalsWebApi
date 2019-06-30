@@ -1,5 +1,12 @@
+using System;
 using System.Data.Entity;
+using System.Web;
 using DateIntervalsWebApi.DataContexts;
+using DateIntervalsWebApi.Interfaces;
+using DateIntervalsWebApi.Repository;
+using Microsoft.Web.Infrastructure.DynamicModuleHelper;
+using Ninject;
+using Ninject.Web.Common;
 using Ninject.Web.Common.WebHost;
 
 [assembly: WebActivatorEx.PreApplicationStartMethod(typeof(DateIntervalsWebApi.App_Start.NinjectWebCommon), "Start")]
@@ -7,15 +14,6 @@ using Ninject.Web.Common.WebHost;
 
 namespace DateIntervalsWebApi.App_Start
 {
-    using System;
-    using System.Web;
-    using DateIntervalsWebApi.Interfaces;
-    using DateIntervalsWebApi.Repository;
-    using Microsoft.Web.Infrastructure.DynamicModuleHelper;
-
-    using Ninject;
-    using Ninject.Web.Common;
-
     public static class NinjectWebCommon 
     {
         private static readonly Bootstrapper bootstrapper = new Bootstrapper();
@@ -42,7 +40,7 @@ namespace DateIntervalsWebApi.App_Start
         /// Creates the kernel that will manage your application.
         /// </summary>
         /// <returns>The created kernel.</returns>
-        private static IKernel CreateKernel()
+        public static IKernel CreateKernel()
         {
             var kernel = new StandardKernel();
             try
@@ -65,8 +63,9 @@ namespace DateIntervalsWebApi.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
-            kernel.Bind<IDateIntervalsRepository>().To<DateIntervalsRepository>();
             kernel.Bind<DbContext>().To<DateIntervalsDbContext>().WithConstructorArgument("connectionName", "DefaultConnection");
+
+            kernel.Bind<IDateIntervalsRepository>().To<DateIntervalsRepository>();
         }        
     }
 }

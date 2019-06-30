@@ -14,7 +14,10 @@ namespace DateIntervalsWebApi.Controllers
         {
             _repository = repository;
         }
-
+        public string Get()
+        {
+            return "date type 01-01-2000";
+        }
         [HttpPost]
         public List<DateInterval> GetIntervals([FromBody]DateIntervalsRequest getRequest)
         {
@@ -27,7 +30,6 @@ namespace DateIntervalsWebApi.Controllers
                     EndDate = DateTime.Parse(getRequest.EndDate)
                 });
             }
-
             return null;
         }
 
@@ -43,6 +45,7 @@ namespace DateIntervalsWebApi.Controllers
                     EndDate = DateTime.Parse(saveRequest.EndDate)
                 });
             }
+
         }
     }
 }

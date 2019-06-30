@@ -5,8 +5,6 @@ VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateIntervalsWebApi", "DateIntervalsWebApi\DateIntervalsWebApi.csproj", "{03B76532-A115-4B89-882D-A42B483750AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateIntervalsWebApi.Tests", "DateIntervalsWebApi.Tests\DateIntervalsWebApi.Tests.csproj", "{60A9C09B-9F17-4071-83B3-E9A7FFD146C2}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateIntervalsClient", "DateIntervalsClient\DateIntervalsClient.csproj", "{B294D78D-0FFC-4417-8C3C-BBE5EDD7ACFB}"
 EndProject
 Global
@@ -19,10 +17,6 @@ Global
 		{03B76532-A115-4B89-882D-A42B483750AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{03B76532-A115-4B89-882D-A42B483750AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{03B76532-A115-4B89-882D-A42B483750AF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{60A9C09B-9F17-4071-83B3-E9A7FFD146C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{60A9C09B-9F17-4071-83B3-E9A7FFD146C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{60A9C09B-9F17-4071-83B3-E9A7FFD146C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{60A9C09B-9F17-4071-83B3-E9A7FFD146C2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B294D78D-0FFC-4417-8C3C-BBE5EDD7ACFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B294D78D-0FFC-4417-8C3C-BBE5EDD7ACFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B294D78D-0FFC-4417-8C3C-BBE5EDD7ACFB}.Release|Any CPU.ActiveCfg = Release|Any CPU

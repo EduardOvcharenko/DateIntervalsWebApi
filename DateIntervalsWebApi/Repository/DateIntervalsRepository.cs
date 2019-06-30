@@ -26,11 +26,8 @@ namespace DateIntervalsWebApi.Repository
 
         public void Save(DateInterval dateInterval)
         {
-            if (dateInterval != null)
-            {
-                _dbContext.DateIntervals.Add(dateInterval);
-                _dbContext.SaveChanges();
-            }
+            _dbContext.DateIntervals.Add(dateInterval);
+            _dbContext.SaveChanges();
         }
     }
 }
